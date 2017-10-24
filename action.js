@@ -23,7 +23,7 @@ function pokedex (){
       "id":"004",
       "name":"Bulbasaur",
       "photo":"04",
-      "type":"Plant"
+      "type":"grass"
     }
   ];
 
@@ -33,7 +33,15 @@ var photo="";
 var type="";
 
 var content="";
+
+var contentInfo="";
+var infoName="";
+var infoType="";
+var infoId="";
+var auxDiv="";
+
 var contentPhoto="";
+
   for(var i=0; i< pokemones.length;i++){
     id= pokemones[i].id;
     name= pokemones[i].name;
@@ -41,12 +49,22 @@ var contentPhoto="";
     type=pokemones[i].type;
 
     console.log(id+name+photo+type);
-    contentPhoto="<div class='photo'>" + "<img src='img/01.png'>"+"</div>";
 
+    //constructor de div photo
 
-    content=content+"<div class='pokemon'><div>" + contentPhoto + "</div>";
+    contentPhoto="<div class='foto'>" + "<img src='img/"+photo+".png'>"+"</div>";
 
+    //constructor de div info
+    infoName="<h2>"+ name + "</h2>";
+    infoId="<span>" + id + "</span>";
+    infoType="<img src='types/"+type+".png'>";
+    auxDiv="<div class='details d-flex justify-content-between'>" +infoId+infoType+"</div>";
+
+    contentInfo="<div class='info'>" +infoName+ auxDiv+ "</div>";
+
+    content=content+"<div class='pokemon'>" + contentPhoto + contentInfo+"</div>";
+    console.log(content);
   }
 
- container.getElementById('container').innerHTML=content;
+ document.getElementById('container').innerHTML=content;
 }
