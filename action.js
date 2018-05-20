@@ -1,31 +1,6 @@
 function pokedex (){
 
-  var pokemones = [
-    {
-      "id":"001",
-      "name":"Hunter",
-      "photo":"01",
-      "type":"poison"
-    },
-    {
-      "id":"002",
-      "name":"Charizard",
-      "photo":"02",
-      "type":"fire"
-    },
-    {
-      "id":"003",
-      "name":"Blastoise",
-      "photo":"03",
-      "type":"water"
-    },
-    {
-      "id":"004",
-      "name":"Bulbasaur",
-      "photo":"04",
-      "type":"grass"
-    }
-  ];
+  
 
 var id="";
 var name="";
